@@ -3,12 +3,12 @@
 
 /**
  *_setenv - Initialize a new environment variables,
- *              or modify an existing one
+ *		or modify an existing one
  *Description:Initialize a new environment variables,
- *              or modify an existing one
+ *		or modify an existing one
  *@info:struct parameter
  *@var:env var
- *@value: env var value
+ *@value: env var values
  *Return: 0
  */
 
@@ -16,42 +16,42 @@
 
 int _setenv(info_t *info, char *var, char *value)
 {
-        char *buff = NULL;
-        list_t *node;
-        char *p;
+	char *buff = NULL;
+	list_t *node;
+	char *p;
 
-        if (!var || !value)
-                return (0);
+	if (!var || !value)
+		return (0);
 
-        buff = malloc(_strlen(var) + _strlen(value) + 2);
+	buff = malloc(_strlen(var) + _strlen(value) + 2);
 
-        if (!buff)
-                return (1);
+	if (!buff)
+		return (1);
 
-        _strcpy(buff, var);
-        _strcat(buff, "=");
-        _strcat(buff, value);
-        node = info->env;
+	_strcpy(buff, var);
+	_strcat(buff, "=");
+	_strcat(buff, value);
+	node = info->env;
 
-        while (node)
-        {                                 
-  p = starts_with(node->str, var);
+	while (node)
+	{
+		p = starts_with(node->str, var);
 
-                if (p && *p == '=')
-                {
-                        free(node->str);
-                        node->str = buff;
-                        info->env_changed = 1;
-                        return (0);
-                }
+		if (p && *p == '=')
+		{
+			free(node->str);
+			node->str = buff;
+			info->env_changed = 1;
+			return (0);
+		}
 
-                node = node->next;
-        }
-        add_node_end(&(info->env), buff, 0);
-        free(buff);
-        info->env_changed = 1;
+		node = node->next;
+	}
+	add_node_end(&(info->env), buff, 0);
+	free(buff);
+	info->env_changed = 1;
 
-        return (0);
+	return (0);
 }
 
 
@@ -63,7 +63,7 @@ int _setenv(info_t *info, char *var, char *value)
 
 
 /**
- *_unsetenv - remove an environment variable
+ *_unsetenv - remove an environment variables
  *Description: remove an env var
  *@info: struct parameter
  *@var:env var
@@ -72,30 +72,31 @@ int _setenv(info_t *info, char *var, char *value)
 
 
 
-  int _unsetenv(info_t *info, char *var)
+int _unsetenv(info_t *info, char *var)
 {
-        list_t *node = info->env;
-        size_t j = 0;
-        char *p;
+	list_t *node = info->env;
+	size_t j = 0;
+	char *p;
 
-        if (!node || !var)
-                return (0);
+	if (!node || !var)
+		return (0);
 
-        while (node)
-        {
-                p = starts_with(node->str, var);
+	while (node)
+	{
+		p = starts_with(node->str, var);
 
-                if (p && *p == '=')
-                {
-                        info->env_changed = delete_node_at_index(&(info->env), j);
-                        j = 0;
-                        node = info->env;
-                        continue;
-                }
+		if (p && *p == '=')
+		{
+			info->env_changed = delete_node_at_index(&(info->env), j);
+			j = 0;
+			node = info->env;
+			continue;
+		}
 
-                node = node->next;
-                j++;
-        }
+		node = node->next;
+		j++;
+	}
 
-        return (info->env_changed);
+	return (info->env_changed);
 }
+

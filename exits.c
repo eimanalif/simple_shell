@@ -2,8 +2,8 @@
 
 
 /**
- **_strncat - concatenates strings
- *Description: concatenate strings for n number of chars
+ **_strncat - concatenate strings
+ *Description: concatenates strings for n number of chars
  *@dest:string 1
  *@src:string 2
  *@n: bytes number
@@ -13,24 +13,28 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-        int j;
-        int k;
-        char *s = dest;
+	int j;
+	int k;
+	char *s = dest;
 
-        j = 0;
-        k = 0;
-        while (dest[j] != '\0')
-                j++;
-        while (src[k] != '\0' && k < n)
-        {
-                dest[j] = src[k];
-                j++;
-                k++;
-        }
-        if (k < n)
-                dest[j] = '\0';
-        return (s);
+	j = 0;
+	k = 0;
+	while (dest[j] != '\0')
+		j++;
+	while (src[k] != '\0' && k < n)
+	{
+		dest[j] = src[k];
+		j++;
+		k++;
+	}
+	if (k < n)
+		dest[j] = '\0';
+	return (s);
 }
+
+
+
+
 
 
 
@@ -48,12 +52,12 @@ char *_strncat(char *dest, char *src, int n)
 
 char *_strchr(char *s, char c)
 {
-        do {
-                if (*s == c)
-                        return (s);
-        } while (*s++ != '\0');
+	do {
+		if (*s == c)
+			return (s);
+	} while (*s++ != '\0');
 
-        return (NULL);
+	return (NULL);
 }
 
 
@@ -62,7 +66,7 @@ char *_strchr(char *s, char c)
 
 
 /**
- **_strncpy - copy string
+ **_strncpy - copys string
  *Description:copy string to n number of char
  *@dest:string
  *@src:source string
@@ -75,23 +79,35 @@ char *_strchr(char *s, char c)
 
 char *_strncpy(char *dest, char *src, int n)
 {
-        int j, k;
-        char *s = dest;
+	int j, k;
+	char *s = dest;
 
-        j = 0;
-        while (src[j] != '\0' && j < n - 1)
-        {
-                dest[j] = src[j];
-                j++;
-        }
-        if (j < n)
-        {
-                k = j;
-                while (k < n)
-                {
-                        dest[k] = '\0';
-                        k++;
-                }
-        }
-        return (s);
+	j = 0;
+	while (src[j] != '\0' && j < n - 1)
+	{
+		dest[j] = src[j];
+		j++;
+	}
+	if (j < n)
+	{
+		k = j;
+		while (k < n)
+		{
+			dest[k] = '\0';
+			k++;
+		}
+	}
+	return (s);
 }
+
+
+
+
+
+
+
+
+
+
+
+

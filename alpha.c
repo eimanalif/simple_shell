@@ -2,8 +2,8 @@
 
 
 /**
- *_isalpha - checks alphabetic charters
- *Description:checks alphapatic character
+ *_isalpha - check alphabetic charter
+ *Description:checks alphapatic characters
  *@c:char
  *Return:1 or 0
  */
@@ -12,8 +12,8 @@
 
 int _isalpha(int c)
 {
-        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-                return (1);
-        else
-                return (0);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else
+		return (0);
 }
