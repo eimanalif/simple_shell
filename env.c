@@ -13,7 +13,7 @@
 
 int _mysetenv(info_t *info)
 {
-	if (info->argc != 3)
+        if (info->argc != 3)
 	{
 		_eputs("Incorrect number of arguements\n");
 		return (1);
