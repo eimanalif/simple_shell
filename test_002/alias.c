@@ -6,7 +6,7 @@
 /**
  *unset_alias - unset alias
  *Description:unset alias or remove it
- *@info:struct parameter
+ *@info:struct parameters
  *@str:string
  *Return: 0 or 1
  */
@@ -34,7 +34,7 @@ int unset_alias(info_t *info, char *str)
 /**
  *set_alias - sets alias
  *Description:set a string to alias
- *@info:struct parameter
+ *@info:struct parameters
  *@str: string alias
  *Return: 0 or 1
  */
@@ -64,8 +64,8 @@ int set_alias(info_t *info, char *str)
 
 
 /**
- *print_alias - alias string print
- *Description:alias string print
+ *print_alias - alias string prints
+ *Description:alias string prints
  *@node:alias node
  *Return:0 or 1
  */
@@ -97,7 +97,7 @@ int print_alias(list_t *node)
 /**
  *_myalias - works same like builtin alias
  *Description:same like builtin alias
- *@info:struct parameter
+ *@info:struct parameters
  *Return: 0
  */
 
@@ -130,11 +130,3 @@ int _myalias(info_t *info)
 
 	return (0);
 }
-
-
-
-
-
-
-
-

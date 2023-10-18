@@ -6,9 +6,9 @@
 
 
 /**
- *set_info - intialize struct
- *Description:intialize struct
- *@info:adress of struct
+ *set_info - intialize structs
+ *Description:intialize structs
+ *@info:adress of structs
  *@av:arg vector
  *Return: void
  */
@@ -54,8 +54,8 @@ void set_info(info_t *info, char **av)
 
 
 /**
- *clear_info - intialize info struct
- *Description:itialize info struct
+ *clear_info - intialize info structs
+ *Description:itialize info structs
  *@info:struct parameter
  *Return:void
  */
@@ -81,9 +81,9 @@ void clear_info(info_t *info)
 
 
 /**
- *free_info - free struct
- *Description: free struct
- *@info:adress of struct
+ *free_info - free structs
+ *Description: free structs
+ *@info:adress of structs
  *@all:all fields
  *Return:void
  */
@@ -120,4 +120,3 @@ void free_info(info_t *info, int all)
 		_putchar(BUF_FLUSH);
 	}
 }
-

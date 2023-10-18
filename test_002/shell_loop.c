@@ -3,8 +3,8 @@
 
 
 /**
- *hsh -shell loop
- *Description:shell loop
+ *hsh -shell loops
+ *Description:shell loops
  *@info :parameter and return value
  *@argv:vector
  *Return: 0 (success), 1 error
@@ -61,8 +61,8 @@ int hsh(info_t *info, char **argv)
 
 
 /**
- *find_builtin - finding built-in command
- *Description: to find a built-in command
+ *find_builtin - finding built-in commands
+ *Description: to find a built-in commands
  *@info: parameter and return info struct
  *Return: 0 (success) 1 (not success) -1  (not found) 2 (exit)
  */
@@ -93,5 +93,3 @@ int find_builtin(info_t *info)
 		}
 	return (built_in_retn);
 }
-
-

@@ -8,8 +8,8 @@
 
 
 /**
- *remove_comments - a function to replace '#' with '\0'
- *Description:function to replace '#' with'\0'
+ *remove_comments - a functions to replace '#' with '\0'
+ *Description:functions to replace '#' with'\0'
  *@buf:adress of str
  *Return:0
  */
@@ -30,4 +30,3 @@ void remove_comments(char *buf)
 			break;
 		}
 }
-

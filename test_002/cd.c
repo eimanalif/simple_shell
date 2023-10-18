@@ -4,8 +4,8 @@
 
 /**
  *_mycd - changes directory
- *Description:change directory
- *@info:struct
+ *Description:changes directory
+ *@info:structs
  *Return: 0 (success)
  */
 

@@ -6,7 +6,7 @@
 /**
  *find_path - find cmd in PATH
  *Description:find cmd
- *@info: struct
+ *@info: structs
  *@pathstr:the PATH
  *@cmd:cmd to find
  *Return:path or NULL
@@ -68,7 +68,7 @@ char *find_path(info_t *info, char *pathstr, char *cmd)
 /**
  *is_cmd - find excutable commands
  *Description: find excutable commands
- *@info: struct
+ *@info: structs
  *@path:file path
  *Return: 1 or 0
  */
@@ -100,7 +100,7 @@ int is_cmd(info_t *info, char *path)
  *@pathstr:pathstring
  *@start:start index
  *@stop:stop index
- *Return:pointer
+ *Return:pointers
  */
 
 
@@ -117,22 +117,3 @@ int j = 0;
 	buf[j] = 0;
 	return (buf);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
