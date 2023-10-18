@@ -72,7 +72,9 @@ void fork_cmd(info_t *info)
 
 	if (child_pid == -1)
 	{
-		/* TODO: PUT ERROR FUNCTION */
+
+		/*** TODO: USE ERROR FUNCTION ***/
+
 		perror("Error:");
 		return;
 	}
@@ -86,7 +88,9 @@ void fork_cmd(info_t *info)
 				exit(126);
 			exit(1);
 		}
-		/* TODO: PUT ERROR FUNCTION */
+
+		/*** TODO: USE  ERROR FUNCTION ***/
+
 	}
 
 	else
